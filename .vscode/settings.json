@@ -1,0 +1,40 @@
+{
+	"cmake.sourceDirectory": "${workspaceFolder}/algorithms_in_c",
+	"cmake.debugConfig": {
+		"args": ["../../datasets/integers_list_1000"]
+	},
+	"files.associations": {
+		"any": "c",
+		"array": "c",
+		"hash_map": "c",
+		"*.tcc": "c",
+		"forward_list": "c",
+		"string": "c",
+		"unordered_map": "c",
+		"unordered_set": "c",
+		"expected": "c",
+		"memory": "c",
+		"optional": "c",
+		"string_view": "c",
+		"hash_set": "c",
+		"slist": "c",
+		"fstream": "c",
+		"future": "c",
+		"istream": "c",
+		"ostream": "c",
+		"shared_mutex": "c",
+		"spanstream": "c",
+		"sstream": "c",
+		"stacktrace": "c",
+		"stop_token": "c",
+		"streambuf": "c",
+		"syncstream": "c",
+		"thread": "c",
+		"functional": "c",
+		"regex": "c",
+		"tuple": "c",
+		"valarray": "c",
+		"variant": "c",
+		"read_from_file.h": "c"
+	}
+}

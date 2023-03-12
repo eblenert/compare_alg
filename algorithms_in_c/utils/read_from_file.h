@@ -1,0 +1,1 @@
+int readFromFile(char *filename, int **arr);
