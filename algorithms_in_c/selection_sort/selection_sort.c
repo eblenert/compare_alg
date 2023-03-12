@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 #include "../utils/read_from_file.h"
 #include "../utils/swap.h"
@@ -35,7 +36,6 @@ void selectionSort(int arr[], int n)
 // Driver program to test above functions
 int main(int argc, char *argv[])
 {
-    printf("Reading %s for selection sort\n\n", argv[1]);
     int *arr;
     int n;
     n = readFromFile(argv[1], &arr);
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     selectionSort(arr, n);
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Took %fs\n", time_spent);
+    printf("Selection sort for %s took %fs\n", argv[1], time_spent);
 
     free(arr);
     return 0;

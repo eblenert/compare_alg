@@ -71,8 +71,6 @@ void heapSort(int arr[], int N)
 // Driver's code
 int main(int argc, char *argv[])
 {
-    printf("Reading %s for heap sort\n\n", argv[1]);
-
     int *arr;
     int n;
     n = readFromFile(argv[1], &arr);
@@ -82,7 +80,7 @@ int main(int argc, char *argv[])
 	heapSort(arr, n);
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Took %fs\n", time_spent);
+    printf("Heap sort for %s took %fs\n", argv[1], time_spent);
 
     free(arr);
 }

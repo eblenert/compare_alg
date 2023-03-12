@@ -23,8 +23,6 @@ void bubbleSort(int arr[], int n)
 // Driver program to test above functions
 int main(int argc, char *argv[])
 {
-    printf("Reading %s for bubble sort \n\n", argv[1]);
-
     int *arr;
     int n;
 	
@@ -36,6 +34,6 @@ int main(int argc, char *argv[])
 
     free(arr);
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Took %fs\n", time_spent);
+    printf("Bubble sort for %s took %fs\n", argv[1], time_spent);
 	return 0;
 }

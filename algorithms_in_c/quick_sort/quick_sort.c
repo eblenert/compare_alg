@@ -55,7 +55,6 @@ void quickSort(int arr[], int low, int high)
 // Driver Code
 int main(int argc, char *argv[])
 {
-    printf("Reading %s for quick sort\n\n", argv[1]);
     int *arr;
     int n;
     n = readFromFile(argv[1], &arr);
@@ -66,7 +65,7 @@ int main(int argc, char *argv[])
     free(arr);
 
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Took %fs\n", time_spent);
+    printf("Quick sort for %s took %fs\n", argv[1], time_spent);
 	return 0;
 }
 
