@@ -9,12 +9,13 @@ subprocess.run(["make"], cwd="./build")
 
 sizes = [1000, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000]
 
-datasets = map(lambda x: f'integers_list_{x}', sizes[0: 3])
+datasets = list(map(lambda x: f'datasets/integers_list_{x}', sizes))
 algorithms = ['selection_sort', 'bubble_sort', 'insertion_sort',
               'merge_sort', 'quick_sort', 'heap_sort', 'radix_sort', 'shell_sort']
 
-algorithms_execs = map(lambda x: f'build/x/x', algorithms)
+algorithms_execs = list(map(lambda x: f'build/{x}/{x}', algorithms))
+
 for dataset in datasets:
     for alg in algorithms_execs:
-        result = subprocess.run([alg, dataset])
-        print(result)
+        output = subprocess.check_output(alg + ' ' + dataset, shell=True, )
+        print(output.decode())
